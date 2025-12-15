@@ -7,7 +7,7 @@ import Googlelogin from "./Googlelogin";
 import Dashboard from "./dashboard";
 import Notfound from "./Notfound";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import Refreshhandler from "./assets/Refreshhandler";
+import Refreshhandler from "./Refreshhandler";
 
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false);

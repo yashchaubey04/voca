@@ -23,6 +23,7 @@ function dashboard() {
         alt={userInfo?.email}
         width={150}
         height={150}
+        style={{borderRadius:"50%"}}
       />
       <button onClick={handleLogout}>Logout</button>
     </div>
