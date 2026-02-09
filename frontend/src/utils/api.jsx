@@ -5,7 +5,10 @@ const api = axios.create({
     withCredentials: true,
 });
 
-export const googleAuth = (code) => api.get(`/auth/google?code=${code}`);
+// export const googleAuth = (code) => api.post(`/auth/google?code=${code}`);
+export const googleAuth = (code) => {
+  return api.post("/auth/google", { code });
+};
 //testing this line 
 // export const googleAuth = () => {
 //   window.location.href =
