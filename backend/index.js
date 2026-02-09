@@ -5,7 +5,6 @@ const app = express();
 app.set("trust proxy", 1);
 console.log("🔥 LOCAL SERVER FILE LOADED 🔥");
 
-
 const PORT = process.env.PORT || 8080;
 
 require("./models/dbConnection");
@@ -44,7 +43,7 @@ app.use(
       }
     },
     credentials: true,
-  })
+  }),
 );
 
 app.use(express.json());
@@ -81,8 +80,6 @@ io.use((socket, next) => {
     next(new Error("Invalid token"));
   }
 });
-
-
 
 //  SOCKET EVENTS
 io.on("connection", async (socket) => {
@@ -122,9 +119,7 @@ io.on("connection", async (socket) => {
     const senderId = socket.userId;
 
     const convo = await Conversation.findById(conversationId);
-    const receiverId = convo.members.find(
-      (id) => id.toString() !== senderId
-    );
+    const receiverId = convo.members.find((id) => id.toString() !== senderId);
 
     const receiver = await User.findById(receiverId);
     const sender = await User.findById(senderId);
@@ -151,21 +146,17 @@ io.on("connection", async (socket) => {
 
     if (sourceLang !== targetLang) {
       try {
-        const translated = await translateText(
-          text,
-          targetLang,
-          sourceLang
-        );
+        const translated = await translateText(text, targetLang, sourceLang);
         console.log("TRANSLATE REQUEST:", {
-  text,
-  sourceLang,
-  targetLang,
-});
+          text,
+          sourceLang,
+          targetLang,
+        });
 
- if (!translated || translated === text) {
-      console.log("Translation failed or same text");
-      return;
-    }
+        if (!translated ) {
+          console.log("Translation failed or same text");
+          return;
+        }
 
         newMessage.textTranslated = translated;
         newMessage.status = "translated";
