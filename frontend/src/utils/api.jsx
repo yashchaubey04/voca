@@ -5,12 +5,12 @@ const api = axios.create({
     withCredentials: true,
 });
 
-// export const googleAuth = (code) => api.get(`/auth/google?code=${code}`);
+export const googleAuth = (code) => api.get(`/auth/google?code=${code}`);
 //testing this line 
-export const googleAuth = () => {
-  window.location.href =
-    `${import.meta.env.VITE_API_URL}/auth/google`;
-};
+// export const googleAuth = () => {
+//   window.location.href =
+//     `${import.meta.env.VITE_API_URL}/auth/google`;
+// };
 
 
 api.interceptors.request.use(

@@ -5,8 +5,12 @@ const axios = require("axios");
 const jwt = require("jsonwebtoken");
 const googlelogin = async (req, res) => {
   try {
-    const { code } = req.query;
-    
+    // const { code } = req.query;
+    const { code } = req.body;
+    // const googleRes = await oauth2client.getToken(code);
+      if (!code) {
+      return res.status(400).json({ message: "Code missing" });
+    }
     const googleRes = await oauth2client.getToken({
   code,
   redirect_uri: "postmessage",

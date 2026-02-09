@@ -8,6 +8,6 @@ router.get("/test", (req, res) => {
   console.log(req.user) 
    res.send("test");
 });
-router.get("/google", googlelogin);
+router.post("/google", googlelogin);
 
 module.exports = router;
