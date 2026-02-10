@@ -93,58 +93,63 @@ The system is designed with a strong focus on **low latency**, **scalability**, 
 - Cache Store: Redis
 
 ---
-
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-
 ```bash
 git clone https://github.com/viveksingh62/chatter.git
 cd chatter
-```bash
-2️⃣ Setup Backend
+```
 
+### 2️⃣ Setup Backend
+```bash
 cd backend
 npm install
+```
 
-Create a .env file inside backend/:
-
+Create a `.env` file inside `backend/`:
+```
 PORT=8080
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 REDIS_URL=your_redis_url
 TRANSLATION_API_KEY=your_translation_api_key
 CLIENT_URL=http://localhost:5173
+```
 
 Run backend:
-
+```bash
 node index.js
+```
 
-3️⃣ Setup Frontend
-
+### 3️⃣ Setup Frontend
+```bash
 cd frontend
 npm install
+```
 
-Create a .env file inside frontend/:
-
+Create a `.env` file inside `frontend/`:
+```
 VITE_BACKEND_URL=http://localhost:8080
+```
 
 Run frontend:
-npm run dev
 ```bash
+npm run dev
+```
 
-🧠 Challenges & Learnings
+---
 
-Built scalable real-time communication using Socket.io
+## 🧠 Challenges & Learnings
 
-Integrated live translation into active chat streams
+- Built scalable real-time communication using Socket.io
+- Integrated live translation into active chat streams
+- Used Redis to optimize socket events and state handling
+- Handled authentication, cookies, and CORS in production
+- Improved system design for real-time MERN applications
 
-Used Redis to optimize socket events and state handling
+---
 
-Handled authentication, cookies, and CORS in production
-
-Improved system design for real-time MERN applications
+Developed by **Vivek Singh** ✨
 
 
-
-Developed by Vivek Singh ✨
