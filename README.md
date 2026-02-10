@@ -133,6 +133,7 @@
 
     Run frontend:
     npm run dev
+    ```bash
 
     🧠 Challenges & Learnings
 
