@@ -27,7 +27,6 @@ The system is designed with a strong focus on **low latency**, **scalability**, 
 
 > 📌 Click to Watch Demo showcasing real-time chat and live translation
 
-## 🎥 Demo Video
 
 <p align="center">
   <a href="https://youtu.be/GmMqWdp7G9c">
@@ -103,11 +102,11 @@ The system is designed with a strong focus on **low latency**, **scalability**, 
 git clone https://github.com/viveksingh62/chatter.git
 cd chatter
 
-
+2️⃣ Setup Backend
 cd backend
 npm install
 
-
+Create a .env file inside backend/:
 PORT=8080
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
@@ -115,15 +114,16 @@ REDIS_URL=your_redis_url
 TRANSLATION_API_KEY=your_translation_api_key
 CLIENT_URL=http://localhost:5173
 
-
+Run backend:
 node index.js
 
-
+3️⃣ Setup Frontend
 cd frontend
 npm install
 
+Create a .env file inside frontend/:
 VITE_BACKEND_URL=http://localhost:8080
-
+Run frontend:
 npm run dev
 
 
