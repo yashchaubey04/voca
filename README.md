@@ -148,7 +148,7 @@ npm run dev
 - Handled authentication, cookies, and CORS in production
 - Improved system design for real-time MERN applications
 
----
+----
 
 Developed by **Vivek Singh** ✨
 
