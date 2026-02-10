@@ -101,7 +101,7 @@ The system is designed with a strong focus on **low latency**, **scalability**, 
 ```bash
 git clone https://github.com/viveksingh62/chatter.git
 cd chatter
-
+```bash
 2️⃣ Setup Backend
 
 cd backend
