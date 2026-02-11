@@ -150,6 +150,6 @@ npm run dev
 
 ----
 
-Developed by **Vivek Singh** ✨
+Developed by **Yash Chaubey** ✨
 
 
